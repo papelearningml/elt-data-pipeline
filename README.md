@@ -1,3 +1,4 @@
+
 # ELT Data Pipeline Project
 
 ## Overview
@@ -14,6 +15,7 @@ This project demonstrates a comprehensive Extract, Load, and Transform (ELT) dat
 
 ## Project Structure
 
+```
 .
 ├── airflow/
 │   ├── airflow.cfg
@@ -31,7 +33,7 @@ This project demonstrates a comprehensive Extract, Load, and Transform (ELT) dat
 ├── Dockerfile
 ├── entrypoint.sh
 └── README.md
-
+```
 
 ## Pipeline Overview
 
@@ -51,14 +53,55 @@ This project demonstrates a comprehensive Extract, Load, and Transform (ELT) dat
 ## Setup and Execution
 
 1. Clone the repository:
-   git clone https://github.com/your-username/elt-data-pipeline.git
+   ```bash
+   git clone https://github.com/papelearningml/elt-data-pipeline.git
    cd elt-data-pipeline
-2. Start the services: 
-  docker-compose up -d
+   ```
+
+2. Start the services:
+   ```bash
+   docker-compose up -d
+   ```
+
 3. Access Airflow web interface:
-  http://localhost:8083
-4. Trigger the `elt_and_dbt` DAG in Airflow to run the pipeline
-   
+   ```bash
+   http://localhost:8083
+   ```
+
+4. Trigger the `elt_and_dbt` DAG in Airflow to run the pipeline.
+
+## Detailed Component Description
+
+### Source and Destination Databases
+
+Two PostgreSQL instances are used:
+
+- Source database on port 5433
+- Destination database on port 5434
+
+### Apache Airflow
+
+- Manages workflow orchestration
+- DAG defined in `airflow/dags/elt_dag.py`
+- Airflow webserver accessible on port 8083
+
+### dbt (data build tool)
+
+- Handles data transformations
+- Models defined in `custom_postgres/models/`
+- Configuration in `dbt_project.yml` and `dbt_profiles.yml`
+
+### Docker Configuration
+
+- All services defined in `docker-compose.yaml`
+- Custom Dockerfile for Airflow and dbt setup
+- Utilizes a custom network (`elt_network`) for inter-service communication
+
+### ELT Script
+
+- Located in `elt_script/elt_script.py`
+- Responsible for extracting data from source and loading into destination database
+
 ## Learning Outcomes
 
 This project demonstrates proficiency in:
