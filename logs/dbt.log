@@ -1,0 +1,76 @@
+[0m01:22:55.244019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10268f850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047bd0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047bd400>]}
+
+
+============================== 01:22:58.188586 | 8f95175b-5c6b-4682-9280-c11c8382b1cc ==============================
+[0m01:22:58.188586 [info ] [MainThread]: Running with dbt=1.8.7
+[0m01:22:58.191411 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/flexy/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt init', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m01:22:58.216238 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/flexy/.dbt')}
+[0m01:22:58.216667 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m01:23:12.413776 [debug] [MainThread]: Starter project path: /Users/flexy/Desktop/MesDocs/github/DataEng/RealTimeDataPipeline/data-engineering/lib/python3.9/site-packages/dbt/include/starter_project
+[0m01:23:12.427212 [info ] [MainThread]: 
+Your new dbt project "custom_postgres" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:23:12.427897 [info ] [MainThread]: Setting up your profile.
+[0m01:31:24.381516 [info ] [MainThread]: Profile custom_postgres written to /Users/flexy/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m01:31:24.768332 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 509.59793, "process_user_time": 0.757612, "process_kernel_time": 0.186806, "process_mem_max_rss": "94191616", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m01:31:24.770954 [debug] [MainThread]: Command `dbt init` succeeded at 01:31:24.770567 after 509.60 seconds
+[0m01:31:24.772728 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10268f850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10482ef70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10480c040>]}
+[0m01:31:24.774328 [debug] [MainThread]: Flushing usage events
+[0m04:56:07.896833 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064f67c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108630f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108630bb0>]}
+
+
+============================== 04:56:07.900782 | 49d54e8b-a79b-4526-bf65-2df7d0b09f4a ==============================
+[0m04:56:07.900782 [info ] [MainThread]: Running with dbt=1.8.7
+[0m04:56:07.901187 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/Users/flexy/.dbt', 'log_path': 'logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt clean', 'send_anonymous_usage_stats': 'True'}
+[0m04:56:07.901794 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/flexy/Desktop/MesDocs/github/DataEng/data-eng-db/elt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m04:56:07.906830 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_wall_clock_time": 0.054413456, "process_user_time": 0.721539, "process_kernel_time": 0.15806, "process_mem_max_rss": "95256576", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m04:56:07.907203 [debug] [MainThread]: Command `dbt clean` failed at 04:56:07.907149 after 0.05 seconds
+[0m04:56:07.907453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064f67c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108609d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108609d00>]}
+[0m04:56:07.907673 [debug] [MainThread]: Flushing usage events
+[0m04:56:45.359520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071ab790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092d8eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092d8b80>]}
+
+
+============================== 04:56:45.363366 | 8918d278-1efd-42a1-b106-d09f87e41d5d ==============================
+[0m04:56:45.363366 [info ] [MainThread]: Running with dbt=1.8.7
+[0m04:56:45.363748 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/flexy/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt clean', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m04:56:45.364345 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/flexy/Desktop/MesDocs/github/DataEng/data-eng-db/elt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m04:56:45.366297 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_wall_clock_time": 0.048560917, "process_user_time": 0.695943, "process_kernel_time": 0.124464, "process_mem_max_rss": "95076352", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m04:56:45.366822 [debug] [MainThread]: Command `dbt clean` failed at 04:56:45.366757 after 0.05 seconds
+[0m04:56:45.367093 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1071ab790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092bceb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1092bc2e0>]}
+[0m04:56:45.367391 [debug] [MainThread]: Flushing usage events
+[0m05:06:07.249559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066cf760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087fce80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087fcb50>]}
+
+
+============================== 05:06:07.254240 | 03d36772-18c0-4168-b3c4-e6e1910b658f ==============================
+[0m05:06:07.254240 [info ] [MainThread]: Running with dbt=1.8.7
+[0m05:06:07.254614 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'profiles_dir': '/Users/flexy/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt clean', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m05:06:07.255184 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/flexy/Desktop/MesDocs/github/DataEng/data-eng-db/elt/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m05:06:07.257074 [debug] [MainThread]: Resource report: {"command_name": "clean", "command_wall_clock_time": 0.047885418, "process_user_time": 0.688535, "process_kernel_time": 0.118207, "process_mem_max_rss": "93356032", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m05:06:07.257523 [debug] [MainThread]: Command `dbt clean` failed at 05:06:07.257457 after 0.05 seconds
+[0m05:06:07.257773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066cf760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087e03d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1087e0f70>]}
+[0m05:06:07.258006 [debug] [MainThread]: Flushing usage events
